@@ -1,0 +1,345 @@
+ RGE Running            1 .-iteration
+ RGE Running            2 .-iteration
+ RGE Running            3 .-iteration
+ RGE Running            4 .-iteration
+ RGE Running            5 .-iteration
+ IIp called with small input:    4.7193043732056617E-006   12831568.846655356        10289703.553268563        8425622.6920578200     
+ IIp called with small input:    4.7193043732056617E-006   12831568.846655356        10289600.918766355        8425622.6920578200     
+ IIp called with small input:    4.7193043732056617E-006   12831568.846655356        9328267.6434580889        8425622.6920578200     
+ IIp called with small input:    1.2589396411010333E-006   12831568.846655356        10289703.545297733        8425622.6920578200     
+ IIp called with small input:    1.2589396411010333E-006   12831568.846655356        9384317.6963176541        8425622.6920578200     
+ MM somehow called with small inputs:    10289703.553268563        4.7193043732056617E-006   9328267.6434580889        4.7193043732056617E-006   12831568.846655356        8425622.6920578200     
+ MM somehow called with small inputs:    10289703.553268563        4.7193043732056617E-006   9328267.6434580889        4.7193043732056617E-006   12831568.846655356        8425622.6920578200     
+ MM somehow called with small inputs:    9328267.6434580889        4.7193043732056617E-006   10289703.553268563        4.7193043732056617E-006   12831568.846655356        8425622.6920578200     
+ MM somehow called with small inputs:    9328267.6434580889        4.7193043732056617E-006   10289703.553268563        4.7193043732056617E-006   12831568.846655356        8425622.6920578200     
+ MM somehow called with small inputs:    10289703.553268563        4.7193043732056617E-006   9328267.6434580889        4.7193043732056617E-006   12831568.846655356        8425622.6920578200     
+ MM somehow called with small inputs:    10289703.553268563        4.7193043732056617E-006   9328267.6434580889        4.7193043732056617E-006   12831568.846655356        8425622.6920578200     
+ MM somehow called with small inputs:    9328267.6434580889        4.7193043732056617E-006   10289703.553268563        4.7193043732056617E-006   12831568.846655356        8425622.6920578200     
+ MM somehow called with small inputs:    9328267.6434580889        4.7193043732056617E-006   10289703.553268563        4.7193043732056617E-006   12831568.846655356        8425622.6920578200     
+ Higgs mass outside range of cross section fit (gluon fusion):            1
+ Higgs mass outside range of cross section fit (vector boson fusion):            1
+ Higgs mass outside range of cross section fit (associated W production):            1
+ Higgs mass outside range of cross section fit (associated Z production):            1
+ Higgs mass outside range of cross section fit (associated top production):            1
+ Higgs mass outside range of cross section fit (gluon fusion):            3
+ Higgs mass outside range of cross section fit (vector boson fusion):            3
+ Higgs mass outside range of cross section fit (associated W production):            3
+ Higgs mass outside range of cross section fit (associated Z production):            3
+ Higgs mass outside range of cross section fit (associated top production):            3
+ Higgs mass outside range of cross section fit (gluon fusion):            4
+ Higgs mass outside range of cross section fit (vector boson fusion):            4
+ Higgs mass outside range of cross section fit (associated W production):            4
+ Higgs mass outside range of cross section fit (associated Z production):            4
+ Higgs mass outside range of cross section fit (associated top production):            4
+ Higgs mass outside range of cross section fit (gluon fusion):            2
+ Higgs mass outside range of cross section fit (vector boson fusion):            2
+ Higgs mass outside range of cross section fit (associated W production):            2
+ Higgs mass outside range of cross section fit (associated Z production):            2
+ Higgs mass outside range of cross section fit (associated top production):            2
+ Higgs mass outside range of cross section fit (gluon fusion):            3
+ Higgs mass outside range of cross section fit (vector boson fusion):            3
+ Higgs mass outside range of cross section fit (associated W production):            3
+ Higgs mass outside range of cross section fit (associated Z production):            3
+ Higgs mass outside range of cross section fit (associated top production):            3
+ Higgs mass outside range of cross section fit (gluon fusion):            4
+ Higgs mass outside range of cross section fit (vector boson fusion):            4
+ Higgs mass outside range of cross section fit (associated W production):            4
+ Higgs mass outside range of cross section fit (associated Z production):            4
+ Higgs mass outside range of cross section fit (associated top production):            4
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    6461.8810268758980        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1204381525073629E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.1233184155640517E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleSFF
+ Involved masses:    5517448.0800246913        2.4816112787162221E-014   2.4816112787162221E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1204381525073629E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
+ Involved masses:    6461.8810268758980        2.1204381525073629E-014   2.1233184155640517E-014
+ Numerical problem in MonopoleVFF
