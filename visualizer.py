@@ -33,7 +33,7 @@ points = df.dropna()
 def sri_function(m):
 	rel= 125. + (m/(m-125.))**(2)
 	return rel
-colors = ['#ff6d00','#ff9100', '#7b2cbf']
+colors = ['#ff6d00','#ffc242', '#7b2cbf']
 
 class ScatterPlot:
 	def __init__(self, title):
@@ -65,7 +65,7 @@ class ScatterPlot:
 
 	def add_scatter(self, df,x,y, color, group, row=2, col=1):
 		self.fig.add_trace(
-			go.Scatter(
+			go.Scattergl(
 				x=df[x],
 				y=df[y],
 				name = 'samples',
@@ -87,73 +87,66 @@ st.dataframe(df, 799,100)
 
 
 st.subheader('Plots')
-axes = [['Mh(1)', 'Mh(2)'], ['obsratio', 'csq(tot)']]
-for x,y in axes:
-	scatter_one = ScatterPlot(' {} vs {}'.format(y,x))
-	if x == axes[0][0]:
-		xx = np.linspace(0,115,200)
-		yy = sri_function(xx)
-		scatter_one.fig.add_trace(
-				go.Scatter(
-					x=xx,
-					y = yy,
-					mode='lines',
-					name = 'Relation'), row=2, col =1)
+
+def plot_observables():
+	axes = np.array([['Mh(1)', 'Mh(2)'], ['obsratio', 'csq(tot)']])
+	axes_sb = axes.flatten()
+	selected = points
+	for ax in axes_sb:
+		values = st.sidebar.slider(
+				'Select a range for {}'.format(ax),
+				points[ax].min(), points[ax].max(), (points[ax].min(), points[ax].max()))
+		selected = selected[selected[ax] > values[0]]
+		selected = selected[selected[ax] < values[1]]
+		st.sidebar.write('Range: ', values)
+	st.sidebar.write('Total points: ', len(points))
+	st.sidebar.write('Total filtered points: ', len(selected))
 
 
-	scatter_one.add_histogram(points, x, colors[0], 'Physical')
-	scatter_one.add_histogram(points, y,  colors[0],'Physical',True )
-	scatter_one.add_scatter(points, x, y, colors[0], 'Physical')
-	st.plotly_chart(scatter_one.fig)
+	for x,y in axes:
+
+		scatter_one = ScatterPlot(' {} vs {}'.format(y,x))
+		if x == axes[0][0]:
+			xx = np.linspace(0,115,200)
+			yy = sri_function(xx)
+			scatter_one.fig.add_trace(
+					go.Scatter(
+						x=xx,
+						y = yy,
+						mode='lines',
+						name = 'Relation'), row=2, col =1)
 
 
-axes = [['m0', 'm12'], ['a0', 'tanbeta']]
-for x,y in axes:
-	scatter_one = ScatterPlot('Parameter Space Random Scan: {} vs {}'.format(y,x))
-	scatter_one.add_histogram(points, x, colors[0], 'Physical')
-	scatter_one.add_histogram(nan_points, x, colors[2], 'Non-Physical')
-	scatter_one.add_histogram(points, y,  colors[0],'Physical',True )
-	scatter_one.add_histogram(nan_points, y,  colors[2], 'Non-Physical',True)
-	scatter_one.add_scatter(points, x, y, colors[0], 'Physical')
-	scatter_one.add_scatter(nan_points, x, y, colors[2], 'Non-Physical')
-	st.plotly_chart(scatter_one.fig)
+		scatter_one.add_histogram(points, x, colors[2], 'Physical')
+		scatter_one.add_histogram(points, y,  colors[2],'Physical',True )
+		scatter_one.add_scatter(points, x, y, colors[2], 'Physical')
 
+		scatter_one.add_histogram(selected, x, colors[0], 'Physical Filtered')
+		scatter_one.add_histogram(selected, y,  colors[0],'Physical Filter',True )
+		scatter_one.add_scatter(selected, x, y, colors[0], 'Physical Filter')
+
+		st.plotly_chart(scatter_one.fig)
+
+def plot_parameter_space():
+	axes = [['m0', 'm12'], ['a0', 'tanbeta']]
+	for x,y in axes:
+		scatter_one = ScatterPlot('Parameter Space Random Scan: {} vs {}'.format(y,x))
+		scatter_one.add_histogram(points, x, colors[0], 'Physical')
+		scatter_one.add_histogram(nan_points, x, colors[2], 'Non-Physical')
+		scatter_one.add_histogram(points, y,  colors[0],'Physical',True )
+		scatter_one.add_histogram(nan_points, y,  colors[2], 'Non-Physical',True)
+		scatter_one.add_scatter(points, x, y, colors[0], 'Physical')
+		scatter_one.add_scatter(nan_points, x, y, colors[2], 'Non-Physical')
+		st.plotly_chart(scatter_one.fig)
 ## Test
-from ipywidgets import interactive, HBox, VBox
 
-dft = df
-
-f= go.FigureWidget(
-	[go.Scatter(x = dft['m0'], y = dft['m12'], mode='markers')]
+visualizations = ['Observables', 'Parameter Space']
+option = st.sidebar.selectbox(
+	'Select visualization:',
+	visualizations
 	)
-scatter = f.data[0]
+if option == visualizations[0]:
+	plot_observables()
+if option == visualizations[1]:
+	plot_parameter_space()
 
-def update_axes(xaxis, yaxis):
-	scatter = f.data[0]
-	scatter.x = df[xaxis]
-	scatter.y = df[yaxis]
-	with f.batch_update():
-		f.layout.xaxis.title = xaxis
-		f.layout.yaxis.title = yaxis
-
-axis_dropdowns = interactive(
-	update_axes,
-	yaxis = dft.select_dtypes('int64').columns,
-	xaxis = dft.select_dtypes('int64').columns
-	)
-
-# Create a table FigureWidget that updates on selection from points in the scatter plot of f
-
-t = go.FigureWidget([go.Table(
-	header=dict(values=['m0', 'm12', 'a0', 'tanbeta'],
-				fill = ict(color='#C2D4FF'),
-				align=['left']*5),
-	cells=dict(values=[dft[col] for col in ['m0', 'm12', 'a0', 'tanbeta']],
-			fill=dict(color='#F5F8FF'),
-			align=['left']*5))])
-
-def selection_fn(trace, points, selector):
-	t.data[0].cells.values = [df.loc[points.point_inds][col] for col in ['m0', 'm12', 'a0', 'tanbeta']]
-scatter.on_selection(selection_fn)
-
-st.plotly_chart(VBox((HBox(axis_dropdowns.children),f,t)))
