@@ -96,7 +96,7 @@ def plot_observables():
 		values = st.sidebar.slider(
 				'Select a range for {}'.format(str(ax)),
 				float(points[ax].min()), float(points[ax].max()), 
-				(points[ax].min(), points[ax].max()))
+				(float(points[ax].min()), float(points[ax].max())))
 		selected = selected[selected[ax] > values[0]]
 		selected = selected[selected[ax] < values[1]]
 		st.sidebar.write('Range: ', values)
