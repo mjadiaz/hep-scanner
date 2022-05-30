@@ -119,6 +119,11 @@ class Sampler:
 				self.sampler_id_dir,
 				model=self.hp.model.name
 				).read()
+			read_param_card = SLHA(
+				param_card[0],
+				self.sampler_id_dir,
+				model = self.hp.model.name
+				)
 
 		observable_name = self.hp.model.observation.name
 		observations = {}

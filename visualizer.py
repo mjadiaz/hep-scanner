@@ -118,4 +118,42 @@ for x,y in axes:
 	scatter_one.add_scatter(nan_points, x, y, colors[2], 'Non-Physical')
 	st.plotly_chart(scatter_one.fig)
 
+## Test
+from ipywidgets import interactive, HBox, VBox
 
+dft = df
+
+f= go.FigureWidget(
+	[go.Scatter(x = dft['m0'], y = dft['m12'], mode='markers')]
+	)
+scatter = f.data[0]
+
+def update_axes(xaxis, yaxis):
+	scatter = f.data[0]
+	scatter.x = df[xaxis]
+	scatter.y = df[yaxis]
+	with f.batch_update():
+		f.layout.xaxis.title = xaxis
+		f.layout.yaxis.title = yaxis
+
+axis_dropdowns = interactive(
+	update_axes,
+	yaxis = dft.select_dtypes('int64').columns,
+	xaxis = dft.select_dtypes('int64').columns
+	)
+
+# Create a table FigureWidget that updates on selection from points in the scatter plot of f
+
+t = go.FigureWidget([go.Table(
+	header=dict(values=['m0', 'm12', 'a0', 'tanbeta'],
+				fill = ict(color='#C2D4FF'),
+				align=['left']*5),
+	cells=dict(values=[dft[col] for col in ['m0', 'm12', 'a0', 'tanbeta']],
+			fill=dict(color='#F5F8FF'),
+			align=['left']*5))])
+
+def selection_fn(trace, points, selector):
+	t.data[0].cells.values = [df.loc[points.point_inds][col] for col in ['m0', 'm12', 'a0', 'tanbeta']]
+scatter.on_selection(selection_fn)
+
+st.plotly_chart(VBox((HBox(axis_dropdowns.children),f,t)))

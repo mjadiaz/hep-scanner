@@ -10,6 +10,8 @@ scan_dir = os.path.join(cwd, 'test')
 
 config = OmegaConf.load('hep_tools.yaml')
 config.directories.scan_dir = scan_dir
+config.scanner.n_workers = 2
+config.scanner.max_sampels = 10
 
 
 ray.init(local_mode=False)
