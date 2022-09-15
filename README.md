@@ -1,4 +1,4 @@
-# Scanner
+# HEP Scanner
 
 Simple package to make a random scan on a parameter space of a BSM physics model with SPheno, HiggsBounds and HiggsSignals. The parameters to scan are defined in the `hep_tools.yaml` file along with the parameter regions. The final data is saved in the data.csv file.
 
