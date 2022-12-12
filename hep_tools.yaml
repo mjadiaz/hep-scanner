@@ -22,5 +22,5 @@ directories:
   madgraph: '/scratch/mjad1g20/HEP/MG5_aMC_v3_1_1'
   higgssignals: '/scratch/mjad1g20/HEP/higgssignals-2.6.2/build'
 scanner:
-  max_samples: 10_000
+  max_samples: 50_000
   n_workers: 36
