@@ -4,7 +4,7 @@ import numpy as np
 import random
 import string
 
-from src.models import MODELS 
+from src.hep_stack import HEPSTACK
 from src.likelihoods import LIKELIHOODS 
 import pandas as pd
 import rich
@@ -84,7 +84,7 @@ class RemoteRandomSampler:
         self.scanner = scanner
         # Generate a random id for hep_stack temp dir and initiate stack
         self.random_id = id_generator()
-        self.hep_stack = MODELS[scan_config.hep_stack_name](
+        self.hep_stack = HEPSTACK[scan_config.hep_stack_name](
                 self.random_id, 
                 hep_config
                 )

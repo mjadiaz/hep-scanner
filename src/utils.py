@@ -93,9 +93,9 @@ def minmax_vector(
         return np.clip((x - Bd)*A/Ad + B, codomain_bottom, codomain_top)
 
 def run_scan(scan_config, hep_config):
-    from src.ray_scan import Scanner
-    from src.ray_scan import Reporter
-    from src.ray_scan import RemoteRandomSampler
+    from src.parallel_scanner import Scanner
+    from src.parallel_scanner import Reporter
+    from src.parallel_scanner import RemoteRandomSampler
     from omegaconf import OmegaConf
     
     import numpy as np

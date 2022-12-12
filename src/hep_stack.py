@@ -9,11 +9,11 @@ import numpy as np
 import os
 import shutil
 
-MODELS: Dict[str, Callable[..., Any]] = dict()
+HEPSTACK: Dict[str, Callable[..., Any]] = dict()
 
 
 def register(hep_stack: Callable[..., Any]) -> Callable[..., Any]:
-    MODELS[hep_stack.__name__] = hep_stack 
+    HEPSTACK[hep_stack.__name__] = hep_stack 
     return hep_stack 
 
 class Space:
