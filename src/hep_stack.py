@@ -3,6 +3,7 @@ from typing import Callable, Any, Dict
 from hepaid.hepread import SLHA, LesHouches
 from hepaid.hepread import HiggsBoundsResults, HiggsSignalsResults
 from hepaid.heptools import Spheno, HiggsBounds, HiggsSignals
+from hepaid.utils import hepstack_dict
 from omegaconf import OmegaConf, DictConfig
 
 import numpy as np
@@ -123,27 +124,40 @@ class SPhenoHbHs:
                 self.sampler_id_dir,
                 model=self.hp.model.name
                 ).read()
-            #print('param_card:', param_card)
-            read_param_card = SLHA(
+            slha = SLHA(
                 param_card,
                 self.sampler_id_dir,
                 model = self.hp.model.name
-                )
+                ).as_dict()
 
-        observable_name = self.hp.model.observation.name
-        observations = {}
-        for obs_name in observable_name:
-            if param_card is not None:
-                if obs_name in higgs_bounds_results.keys():
-                    value = float(higgs_bounds_results[obs_name])
-                if obs_name in higgs_signals_results.keys():
-                    value = float(higgs_signals_results[obs_name])
-                observations[obs_name] = value
-            else:
-                observations[obs_name] = None
-    
-        params_obs = {**parameters,** observations}
-        return params_obs
+            hep_stack_data = hepstack_dict(
+                    self.lhs.as_dict(),
+                    slha,
+                    higgs_bounds_results,
+                    higgs_signals_results
+                    )
+        else: 
+            hep_stack_data = hepstack_dict(
+                    self.lhs.as_dict(),
+                    None,
+                    None,
+                    None, 
+                    )
+        
+        ## Comment old sampling way
+        #observable_name = self.hp.model.observation.name
+        #observations = {}
+        #for obs_name in observable_name:
+        #    if param_card is not None:
+        #        if obs_name in higgs_bounds_results.keys():
+        #            value = float(higgs_bounds_results[obs_name])
+        #        if obs_name in higgs_signals_results.keys():
+        #            value = float(higgs_signals_results[obs_name])
+        #        observations[obs_name] = value
+        #    else:
+        #        observations[obs_name] = None
+        #params_obs = {**parameters,** observations}
+        return hep_stack_data 
     
     def sample_as_numpy(self, parameter_point: np.ndarray) -> np.ndarray:
         print(parameter_point)

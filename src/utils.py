@@ -92,7 +92,7 @@ def minmax_vector(
     else:
         return np.clip((x - Bd)*A/Ad + B, codomain_bottom, codomain_top)
 
-def run_scan(scan_config, hep_config):
+def run_scan(scan_config, hep_config, local_mode=False):
     from src.parallel_scanner import Scanner
     from src.parallel_scanner import Reporter
     from src.parallel_scanner import RemoteRandomSampler
@@ -101,16 +101,18 @@ def run_scan(scan_config, hep_config):
     import numpy as np
     import ray
     
-    ray.init(local_mode=False)
+    ray.init(local_mode=local_mode, num_cpus=scan_config.scanner.n_workers + 1)
     
-    scanner = Scanner.remote(config=scan_config, hep_config=hep_config)
-    reporter = Reporter.remote(scanner, config=scan_config)
-    remote_samplers = [RemoteRandomSampler.remote(scanner, scan_config, hep_config) for _ in range(scan_config.scanner.n_workers)]
+    scanner = Scanner.remote(config=scan_config)
+    #reporter = Reporter.remote(scanner, config=scan_config)
+    remote_samplers = [RemoteRandomSampler.remote(scanner, scan_config, hep_config) 
+            for _ in range(scan_config.scanner.n_workers)]
     
     processes = []
     for remote_sampler in remote_samplers:
     	processes.append(remote_sampler)
-    processes.append(reporter)
+    #processes.append(scanner)
+    #processes.append(reporter)
     
     processes = [p.run.remote() for p in processes]
     ray.wait(processes)
