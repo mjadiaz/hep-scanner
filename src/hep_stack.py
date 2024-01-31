@@ -3,7 +3,7 @@ from typing import Callable, Any, Dict
 from hepaid.hepread import SLHA, LesHouches
 from hepaid.hepread import HiggsBoundsResults, HiggsSignalsResults
 from hepaid.heptools import Spheno, HiggsBounds, HiggsSignals
-from hepaid.utils import hepstack_dict
+from hepaid.hepdata import hepstack
 from omegaconf import OmegaConf, DictConfig
 
 import numpy as np
@@ -24,16 +24,20 @@ class Space:
     def __init__(self, config: DictConfig):
         self.block = config.model.parameters.lhs.block
         self.index = config.model.parameters.lhs.index
+        self.distribution = config.model.parameters.lhs.distribution
         self.low_lim = config.model.parameters.low_lim
         self.high_lim = config.model.parameters.high_lim
-        
+
         self.sample_dim = len(self.index)
-        
+
     def sample(self):
         sample_point = np.zeros(self.sample_dim)
         for i, limits in enumerate(zip(self.low_lim, self.high_lim)):
-        	low, high = limits
-        	sample_point[i] = np.random.uniform(low,high)
+            low, high = limits
+            if self.distribution[i] == 'uniform':
+                sample_point[i] = np.random.uniform(low,high)
+            elif self.distribution[i] == 'binary':
+                sample_point[i] = low if np.random.random() < 0.5 else high
         return sample_point
 
 @register
@@ -47,7 +51,7 @@ class SPhenoHbHs:
         self.scan_dir = self.hp.directories.scan_dir
         self.sampler_id_dir = os.path.join(
     	    self.scan_dir, str(sampler_id)
-    	    )
+            )
 
         # Parameter information 
         self.block = self.hp.model.parameters.lhs.block
@@ -103,7 +107,7 @@ class SPhenoHbHs:
         parameters = {}
         for params in params_iterate:
             block, index, name, value = params
-            self.lhs.block(block).set(index, value)
+            self.lhs[block][index] = value
             parameters[name] = value
 
         # Create new lhs file with the parameter values
@@ -128,39 +132,24 @@ class SPhenoHbHs:
                 param_card,
                 self.sampler_id_dir,
                 model = self.hp.model.name
-                ).as_dict()
+                )
 
-            hep_stack_data = hepstack_dict(
+            hep_stack_data = hepstack(
                     self.lhs.as_dict(),
-                    slha,
+                    slha.as_dict(),
                     higgs_bounds_results,
                     higgs_signals_results
                     )
         else: 
-            hep_stack_data = hepstack_dict(
+            hep_stack_data = hepstack(
                     self.lhs.as_dict(),
                     None,
                     None,
                     None, 
                     )
-        
-        ## Comment old sampling way
-        #observable_name = self.hp.model.observation.name
-        #observations = {}
-        #for obs_name in observable_name:
-        #    if param_card is not None:
-        #        if obs_name in higgs_bounds_results.keys():
-        #            value = float(higgs_bounds_results[obs_name])
-        #        if obs_name in higgs_signals_results.keys():
-        #            value = float(higgs_signals_results[obs_name])
-        #        observations[obs_name] = value
-        #    else:
-        #        observations[obs_name] = None
-        #params_obs = {**parameters,** observations}
         return hep_stack_data 
     
     def sample_as_numpy(self, parameter_point: np.ndarray) -> np.ndarray:
-        print(parameter_point)
         params_obs = self.sample(parameter_point)
         
         observable_name = self.hp.model.observation.name

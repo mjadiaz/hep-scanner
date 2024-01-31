@@ -138,7 +138,7 @@ class RemoteRandomSampler:
             new_dataset_path = self.final_dataset.joinpath(
                         'HEPDataSet_{}'.format(self.random_id)
                         )
-            self.dataset.save(new_dataset_path)
+            self.dataset.save_json(new_dataset_path)
             rich.print('New HEPDataSet at {}'.format(self.random_id)) 
             self.scanner.increment_counter.remote(self.counter)
             self.hep_stack.close()
@@ -153,7 +153,6 @@ class RemoteRandomSampler:
         while not ray.get(self.scanner.stop.remote()):
             self.collect_samples()
             self.save_dataset_and_call()
-        self.hep_stack.close()
 
 
     
@@ -202,7 +201,6 @@ class Reporter:
             self.last_counter = ray.get(self.scanner.get_counter.remote())
             if self.last_counter % self.update_rate == 0:
                 self.update_data()
-                print(self.data())
                 self.save_csv()
         self.update_data()
         self.save_csv()
