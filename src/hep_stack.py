@@ -1,9 +1,8 @@
 from typing import Callable, Any, Dict
 
-from hepaid.hepread import SLHA, LesHouches
-from hepaid.hepread import HiggsBoundsResults, HiggsSignalsResults
-from hepaid.heptools import Spheno, HiggsBounds, HiggsSignals
-from hepaid.hepdata import hepstack
+from hepaid.read import SLHA, LesHouches
+from hepaid.read import HiggsBoundsResults, HiggsSignalsResults
+from hepaid.tools import Spheno, HiggsBounds, HiggsSignals
 from omegaconf import OmegaConf, DictConfig
 
 import numpy as np
@@ -134,14 +133,14 @@ class SPhenoHbHs:
                 model = self.hp.model.name
                 )
 
-            hep_stack_data = hepstack(
+            hep_stack_data = dict(
                     self.lhs.as_dict(),
                     slha.as_dict(),
                     higgs_bounds_results,
                     higgs_signals_results
                     )
         else: 
-            hep_stack_data = hepstack(
+            hep_stack_data = dict(
                     self.lhs.as_dict(),
                     None,
                     None,
